@@ -13,7 +13,12 @@ locals {
     "ecs.g7ne.xlarge",
     "ecs.g7ne.2xlarge",
     "ecs.g7ne.4xlarge",
-    "ecs.g7ne.8xlarge"
+    "ecs.g7ne.8xlarge",
+    "ecs.u1-c1m4.xlarge",
+    "ecs.u1-c1m4.2xlarge",
+    "ecs.e-c1m4.large",
+    "ecs.e-c1m4.xlarge",
+    "ecs.sc3a.xlarge"
   ]
   mgmt_types = [
     "ecs.g6e.large",
@@ -26,6 +31,10 @@ locals {
     "ecs.g7.2xlarge",
     "ecs.g7.4xlarge",
     "ecs.g7.8xlarge",
+    "ecs.g7a.large",
+    "ecs.u1-c1m4.large",
+    "ecs.e-c1m4.large",
+    "ecs.sc3a.xlarge"
   ]
   allowed_instance_types = coalescelist(
     var.chkp_type == "gateway" ? local.gw_types : [],
